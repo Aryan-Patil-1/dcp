@@ -25,8 +25,8 @@ public class Solution{
         arr1[i]=sc.nextInt();
       }
      leader(arr1,ans);
-     //i can do swap here for reverse order but i am tired so you can understand
-       for(int i=ans.size()-1;i>=0;i--){
+   Collections.reverse(ans);
+       for(int i=0;i<ans.size();i--){
         System.out.print(ans.get(i));
        }
        
