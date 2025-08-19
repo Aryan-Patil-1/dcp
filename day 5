@@ -1,0 +1,35 @@
+import java.util.*;
+public class Solution{
+      public static void leader(int[] nums,ArrayList<Integer> ans) {
+       int i=nums.length-1;
+       int j=nums.length-2;
+       ans.add(nums[i]);
+       while(j>=0){
+        if(nums[i]<nums[j]){
+             ans.add(nums[j]);
+             i=j;
+        }
+        j--;
+       }
+
+    }
+    public static void main(String args[]){
+      ArrayList<Integer> ans=new ArrayList<>();
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the size of an array");
+      int n=sc.nextInt();
+      int arr1[]=new int[n];
+       
+      for(int i=0;i<n;i++){
+        System.out.println("Enter the number in array ");
+        arr1[i]=sc.nextInt();
+      }
+     leader(arr1,ans);
+     //i can do swap here for reverse order but i am tired so you can understand
+       for(int i=ans.size()-1;i>=0;i--){
+        System.out.print(ans.get(i));
+       }
+       
+    }
+   
+}
